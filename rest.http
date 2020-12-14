@@ -1,7 +1,14 @@
 GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MTM2ODcsImV4cCI6MTYwNzkxNzI4NywiYXVkIjoiNWZkNTFiMGZjMmU1MDgyN2ZjNGRhZGVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.1y6FhPKp_hUKdCI26Qqhoi17sZKKl7_qZqTe0sc8sAk
 
 ###Login Route
 POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "NewUser2@gmail.com",
+    "password": "EightdigitPassword123"
+}
 
 ###Register Route
 
@@ -9,14 +16,19 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "danielbusztaaaaa@gmail.com",
+    "email": "NewUser6@gmail.com",
     "password": "EightdigitPassword123"
 }
 
 ###Refresh token Route
 
 POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
 
-###Refresh token Route
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MTM3NjEsImV4cCI6MTYzOTQ3MTM2MSwiYXVkIjoiNWZkNTFiMGZjMmU1MDgyN2ZjNGRhZGVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.Iumq89irElrgIv9621LTNINjhu5SmYMgDp9f09DJ6DU"
+}
+
+###Logout
 
 DELETE http://localhost:3000/auth/logout
