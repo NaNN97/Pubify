@@ -1,13 +1,13 @@
 GET http://localhost:3000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MTM2ODcsImV4cCI6MTYwNzkxNzI4NywiYXVkIjoiNWZkNTFiMGZjMmU1MDgyN2ZjNGRhZGVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.1y6FhPKp_hUKdCI26Qqhoi17sZKKl7_qZqTe0sc8sAk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MzcyNTksImV4cCI6MTYwNzk0MDg1OSwiYXVkIjoiNWZkNzJjZWIzMWFlMTM0YTBjZjQ0MjVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ._IxWe8MbAUYZlD0QFbTShSlAJqtjomgrAleBDNZXm3I
 
 ###Login Route
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "NewUser2@gmail.com",
-    "password": "EightdigitPassword123"
+    "email": "nathanallen@gmail.com",
+    "password": "Beczka12"
 }
 
 ###Register Route
@@ -16,8 +16,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "NewUser6@gmail.com",
-    "password": "EightdigitPassword123"
+    "email": "nathanallen@gmail.com",
+    "password": "Beczka12"
 }
 
 ###Refresh token Route
@@ -26,7 +26,7 @@ POST http://localhost:3000/auth/refresh-token
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MTM3NjEsImV4cCI6MTYzOTQ3MTM2MSwiYXVkIjoiNWZkNTFiMGZjMmU1MDgyN2ZjNGRhZGVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.Iumq89irElrgIv9621LTNINjhu5SmYMgDp9f09DJ6DU"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MzcyNTksImV4cCI6MTYzOTQ5NDg1OSwiYXVkIjoiNWZkNzJjZWIzMWFlMTM0YTBjZjQ0MjVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.-C53_rgs5mX_n1WArfQSbnA0lnuB8NXo2W0R94e_vFY"
 }
 
 ###Logout
