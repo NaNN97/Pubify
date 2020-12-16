@@ -1,12 +1,14 @@
-GET http://localhost:3000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MzcyNTksImV4cCI6MTYwNzk0MDg1OSwiYXVkIjoiNWZkNzJjZWIzMWFlMTM0YTBjZjQ0MjVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ._IxWe8MbAUYZlD0QFbTShSlAJqtjomgrAleBDNZXm3I
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODk3MDcsImV4cCI6MTYwODA5MzMwNywiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.bO5djVvww1QFXH1G_oPhxAEse43YWfdW2GZBL-lx3ko
 
 ###Login Route
+
 POST http://localhost:3000/auth/login
+Origin: 'host'
 Content-Type: application/json
 
 {
-    "email": "nathanallen@gmail.com",
+    "email": "dan123@gmail.com",
     "password": "Beczka12"
 }
 
@@ -16,7 +18,7 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "nathanallen@gmail.com",
+    "email": "dan123@gmail.com",
     "password": "Beczka12"
 }
 
@@ -26,9 +28,14 @@ POST http://localhost:3000/auth/refresh-token
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDc5MzcyNTksImV4cCI6MTYzOTQ5NDg1OSwiYXVkIjoiNWZkNzJjZWIzMWFlMTM0YTBjZjQ0MjVjIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.-C53_rgs5mX_n1WArfQSbnA0lnuB8NXo2W0R94e_vFY"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODk3NjIsImV4cCI6MTYzOTY0NzM2MiwiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.6bsosiR0eL46iI9QlZBEt6VrwCIXEJGkpuQY289CwUM"
 }
 
 ###Logout
 
 DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODgwMTEsImV4cCI6MTYzOTY0NTYxMSwiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.MvzcSJWTCkS8f6zQV-rSaUuZy7klMydiUsktXOnZRwo"
+}
