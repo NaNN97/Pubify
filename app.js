@@ -7,8 +7,11 @@ require('./helpers/init_mongodb')
 const { verifyAccessToken } = require('./helpers/jwt_helper')
 require('./helpers/init_redis')
 const expressLayouts = require('express-ejs-layouts')
+const ejs = require('ejs')
 
 const AuthRoute = require('./Routes/Auth.route')
+
+const html = await ejs.renderFile(view, data, {async: true})
 
 const app = express()
 app.use(morgan('dev'))
