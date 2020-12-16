@@ -26,9 +26,11 @@ app.use(expressLayouts)
 app.set('view engine', 'ejs')
 
 // Navigation
+app.get('', (req, res) => {
+  res.render('index')
+})
 app.get('/', verifyAccessToken, async (req, res, next) => {
   res.send('Hello from express.')
-  res.render('index')
 })
 
 app.use('/auth', AuthRoute)
