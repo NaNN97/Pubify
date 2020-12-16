@@ -58,7 +58,7 @@ module.exports = {
                     console.log(err.message)
                     reject(createError.InternalServerError())
                 }
-                client;ient.SET(userId, token, 'EX', 365*24*60*60,(err, reply) => {
+                client.SET(userId, token, 'EX', 365*24*60*60,(err, reply) => {
                     if (err) {
                         reject(createError.InternalServerError())
                         return

@@ -1,10 +1,9 @@
 GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODk3MDcsImV4cCI6MTYwODA5MzMwNywiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.bO5djVvww1QFXH1G_oPhxAEse43YWfdW2GZBL-lx3ko
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwOTgzNzIsImV4cCI6MTYwODEwMTk3MiwiYXVkIjoiNWZkOTk3ZjE1NDZhZDkyZWYwZWEzZTVkIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.RXOTn1T7Fk-Xzxujyq4ma4s8staPehSg0DtCSrwYE00
 
 ###Login Route
 
 POST http://localhost:3000/auth/login
-Origin: 'host'
 Content-Type: application/json
 
 {
