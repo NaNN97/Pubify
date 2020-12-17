@@ -12,6 +12,10 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+
+    telephone: {
+        type: Number,
     }
 })
 
@@ -34,5 +38,5 @@ UserSchema.methods.isValidPassword = async function (password) {
     }
 }
 
-const User = mongoose.model('user', UserSchema)
+const User = mongoose.model('users', UserSchema)
 module.exports = User

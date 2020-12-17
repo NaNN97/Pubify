@@ -13,5 +13,26 @@ const PubsSchema = new Schema({
         type: Number,
         required: true
     },
-    
 })
+
+PubsSchema.pre("save", async function (next) {
+    try {
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(this.password, salt)
+        this.password = hashedPassword
+        next()
+    } catch (error) {
+        next(error)
+    }
+})
+
+PubsSchema.methods.isValidPassword = async function (password) {
+    try {
+        return await bcrypt.compare(password, this.password)
+    } catch (error) {
+        throw error
+    }
+}
+
+const Pub = mongoose.model('pubs', PubsSchema)
+module.exports = Pub

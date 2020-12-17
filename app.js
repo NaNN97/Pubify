@@ -10,8 +10,7 @@ const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
 
 const AuthRoute = require('./Routes/Auth.route')
-
-const html = await ejs.renderFile(view, data, {async: true})
+const BookingRouter = require('./Routes/Book.route')
 
 const app = express()
 app.use(morgan('dev'))
@@ -25,19 +24,22 @@ app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/img', express.static(__dirname + 'public/img'))
 
 // Set Templating Engine
-app.use(expressLayouts)
+app.set('views', './Views')
 app.set('view engine', 'ejs')
 
-// Navigation
-app.get('', (req, res) => {
-  res.render('index')
-})
-app.get('/', verifyAccessToken, async (req, res, next) => {
+app.get('/auth', verifyAccessToken, async (req, res, next) => {
   res.send('Hello from express.')
 })
 
 app.use('/auth', AuthRoute)
 
+//      ---Bookinbooking Page---
+
+app.use('/booking', BookingRouter), (req, res) => {
+  res.render('booking.ejs')
+}
+
+// Error handler
 app.use(async (req, res, next) => {
   next(createError.NotFound())
 })
@@ -52,6 +54,8 @@ app.use((err, req, res, next) => {
   })
 })
 
+
+// Listen on port 3000
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {

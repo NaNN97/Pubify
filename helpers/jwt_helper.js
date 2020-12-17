@@ -33,10 +33,10 @@ module.exports = {
         const bearerToken = authHeader.split(' ')
         const token = bearerToken[1]
         JWT.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
-          if (err) {
+        if (err) {
             const message = err.name === 'JsonWebTokenError' ? 'Unauthorized' : err.message
             return next(createError.Unauthorized(message))
-          }
+        }
           req.payload = payload
           console.log(req.payload)
           next()
@@ -56,7 +56,7 @@ module.exports = {
             JWT.sign(payload, secret, options, (err, token) => {
                 if (err) {
                     console.log(err.message)
-                    reject(createError.InternalServerError())
+                    reject(createError.InternalSersverError())
                 }
                 client.SET(userId, token, 'EX', 365*24*60*60,(err, reply) => {
                     if (err) {

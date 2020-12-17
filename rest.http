@@ -1,5 +1,5 @@
-GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwOTgzNzIsImV4cCI6MTYwODEwMTk3MiwiYXVkIjoiNWZkOTk3ZjE1NDZhZDkyZWYwZWEzZTVkIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.RXOTn1T7Fk-Xzxujyq4ma4s8staPehSg0DtCSrwYE00
+GET http://localhost:3000/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgxODE3MTYsImV4cCI6MTYwODE4NTMxNiwiYXVkIjoiNWZkYWU3YjU2OWFiYWUzOWMwNjkzZjg1IiwiaXNzIjoiQ292aWQxOS5jb20ifQ.zH6KJQXcvbYRwVovMfvDtMUJ_daafD--eabi7HnUj7E
 
 ###Login Route
 
@@ -7,8 +7,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "dan123@gmail.com",
-    "password": "Beczka12"
+    "email": "nathan123@gmail.com",
+    "password": "blablapass123"
 }
 
 ###Register Route
@@ -18,16 +18,16 @@ Content-Type: application/json
 
 {
     "email": "dan123@gmail.com",
-    "password": "Beczka12"
+    "password": "blablapass123"
 }
 
-###Refresh token Route
+###Refresh token Routes
 
 POST http://localhost:3000/auth/refresh-token
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODk3NjIsImV4cCI6MTYzOTY0NzM2MiwiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.6bsosiR0eL46iI9QlZBEt6VrwCIXEJGkpuQY289CwUM"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgxNzk1OTcsImV4cCI6MTYzOTczNzE5NywiYXVkIjoiNWZkYTQ0ZjQwYzUyYTkyZTljMGFjYzQ1IiwiaXNzIjoiQ292aWQxOS5jb20ifQ.TPYYG8YFTRtdqW7bcDUWVS6N6Cy_mMErNqSIYiV_aFE"
 }
 
 ###Logout
@@ -36,5 +36,5 @@ DELETE http://localhost:3000/auth/logout
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgwODgwMTEsImV4cCI6MTYzOTY0NTYxMSwiYXVkIjoiNWZkOTU4ZTE2OGJmOGYzZjUwM2E1NGJiIiwiaXNzIjoiQ292aWQxOS5jb20ifQ.MvzcSJWTCkS8f6zQV-rSaUuZy7klMydiUsktXOnZRwo"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDgxNzk2MDUsImV4cCI6MTYzOTczNzIwNSwiYXVkIjoiNWZkYTQ0ZjQwYzUyYTkyZTljMGFjYzQ1IiwiaXNzIjoiQ292aWQxOS5jb20ifQ.5tC9VSo2Zz4-qAFmXLIjZloNE1xwrbZqW1cfC1USyqY"
 }
