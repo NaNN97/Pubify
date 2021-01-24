@@ -11,6 +11,8 @@ const ejs = require('ejs')
 
 const AuthRoute = require('./Routes/Auth.route')
 const BookingRouter = require('./Routes/Book.route')
+const IndexRouter = require('./Routes/Index.route')
+const PubsRouter = require('./Routes/Pub.route')
 
 const app = express()
 app.use(morgan('dev'))
@@ -31,15 +33,23 @@ app.get('/auth', verifyAccessToken, async (req, res, next) => {
   res.send('Hello from express.')
 })
 
+//      ---Authorization Page---
 app.use('/auth', AuthRoute)
 
-//      ---Bookinbooking Page---
+//      ---Index         Page---
+app.use('/home', IndexRouter)
 
-app.use('/booking', BookingRouter), (req, res) => {
-  res.render('booking.ejs')
-}
+//      ---Bookinbooking Page---
+app.use('/booking', BookingRouter)
+
+//      ---Bookinbooking Page---
+app.use('/pubs', PubsRouter)
 
 // Error handler
+app.use((req, res, next) => {
+  res.status(404).send("This webpage doesn't exists!")
+})
+
 app.use(async (req, res, next) => {
   next(createError.NotFound())
 })

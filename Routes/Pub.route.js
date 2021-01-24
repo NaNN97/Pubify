@@ -2,10 +2,10 @@ const { required } = require('@hapi/joi')
 const { response } = require('express')
 const express = require('express')
 const router = express.Router()
-const BookController = require('../Controllers/Book.Controllers')
+const BookController = require('../Controllers/Pub.Controllers')
 
 router.use('/', (req, res) => {
-    res.render('booking', {title: 'Booking'})
+    res.render('pubs', {title: 'Pubs'})
 })
 
 module.exports = router
