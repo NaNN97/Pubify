@@ -7,8 +7,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "dan123@gmail.com",
-    "password": "Beczka12!"
+    "email": "",
+    "password": ""
 }
 
 ###Register Route
@@ -17,8 +17,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "dan123@gmail.com",
-    "password": "Beczka12!"
+    "email": "",
+    "password": ""
 }
 
 ###Refresh token Routes
